@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="looks.css">
+        <title>Online Text Editor</title>
+    </head>
+
+<body>
+    <div class="vh-100 m-0 p-0 bg-primary d-flex align-items-center flex-column justify-content-center">
+        <div class="cotainer bg-white w-75 start-50 m-2 p-3 rounded">
+            <button class="fa-solid fa-bold button" id="boldB"></button>
+            <button class="fa-solid fa-superscript button" id="superB"></button>
+            <button class="fa-solid fa-subscript button" id="subB"></button>
+            <button class="fa-solid fa-list-ol button" id="listNumberedB"></button>
+            <button class="fa-solid fa-list button" id="listbulletB"></button>
+            <button class="fa-solid fa-rotate-left button" id="undoB"></button>    
+            <button class="fa-solid fa-rotate-right button" id="redoB"></button>
+            <button class="fa-solid fa-link" id="linkB button"></button>
+            <button class="fa-solid fa-link-slash button" id="unlinkB"></button>
+            <button class="fa-solid fa-align-left button" id="alignLeftB"></button>
+            <button class="fa-solid fa-align-center button" id="alignCenterB"></button>
+            <button class="fa-solid fa-align-right button" id="alignRightB"></button>
+            <button class="fa-solid fa-indent button" id="indentB"></button>
+            <button class="fa-solid fa-outdent button" id="outdentB"></button>
+
+            <select class="form-select" id="formatBlock" aria-label="Default select example">
+                <option selected value="1">H1</option>
+                <option value="2">H2</option>
+                <option value="3">H3</option>
+                <option value="3">H4</option>
+                <option value="3">H5</option>
+                <option value="3">H6</option>
+            </select>
+            <select class="form-select" id="fontType" aria-label="Default select example">
+                <option selected value="1">Arial</option>
+                <option value="2">Times New Roman</option>
+            </select>
+            <select class="form-select" id="fontSize" aria-label="Default select example">
+                <option selected value="1">10</option>
+                <option value="2">12</option>
+            </select>
+            <div class="d-flex">
+            <div class="d-flex button">
+                <input type="color" class="form-control form-control-color p-1 button" id="fontColor" style="width: 50px;" id="exampleColorInput" value="#FFFFF" title="Choose your color">
+                <label for="fontColor">Font Color</label>
+            </div>
+            <div class="d-flex button">
+                <input type="color" class="form-control form-control-color p-1 button" id="highlightColor" style="width: 50px;" id="exampleColorInput" value="#FFFFF" title="Choose your color">
+                <label for="highlightColor">Highlight Color</label>
+            </div>
+            </div>
+            <div id="text-input" class="border border-2 border-black" contenteditable="true">Write Your Text Here!</div>
+        </div>
+    </div>
+    <script src="Editor.js"></script>
+</body>
+</html>
